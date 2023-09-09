@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+
+  app:
+    build:
+      context: .
+    network_mode: "host"
+    restart: always
+    user: root
+    ports:
+      - "8000:8000"
