@@ -1,11 +1,9 @@
-version: '3.1'
+version: '3.2'
 
 services:
-
   app:
     build:
       context: .
-    network_mode: "host"
     restart: always
     user: root
     ports:
