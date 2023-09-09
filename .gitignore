@@ -1,0 +1,38 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+env/
+*.env
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependency directories
+lib/
+libs/
+dist/
+build/
+egg-info/
+
+# Compiled files
+*.pyo
+*.pyc
+*.pyd
+*.so
+*.dll
+*.exe
+
+# Environment files
+.env
+.env.backup
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints/
