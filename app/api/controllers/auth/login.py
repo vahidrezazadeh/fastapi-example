@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 
+from app.schemas.auth.LoginSchema import LoginSchema
 
 router = APIRouter(
     tags=["Login Api"],
@@ -8,5 +9,6 @@ router = APIRouter(
 
 
 @router.post("/", response_model=str)
-def loginUser():
+def loginUser(body : LoginSchema):
+    print(body)
     return "Login User API Response"

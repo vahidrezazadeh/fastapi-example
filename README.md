@@ -28,7 +28,7 @@ project_name/
 │   ├── dependencies/
 │   │   ├── __init__.py
 │   │   └── ...
-|    ├── routes/
+│   ├── routes/
 │   │   ├── __init__.py
 │   │   └── ...
 │   ├── main.py
