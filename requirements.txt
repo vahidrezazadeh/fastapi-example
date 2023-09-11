@@ -3,3 +3,7 @@ uvicorn
 pydantic
 typing
 pydantic_settings
+python-jose[cryptography]
+asgiref
+loguru
+pytz
