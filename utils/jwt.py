@@ -39,3 +39,19 @@ async def create_refresh_token(sub: str, expire_time: datetime | None = None, **
    
     return refresh_token, expire
 
+async def jwt_decode(refresh_token : str):
+    """
+    Decode token
+
+    :param token:
+    :return:
+    """
+    try:
+        payload = jwt.decode(refresh_token, settings.TOKEN_SECRET_KEY, algorithms=[settings.TOKEN_ALGORITHM])
+        user_id = int(payload.get('sub'))
+        if not user_id:
+            raise Exception("Token Is Not Valid")
+    except :
+        raise Exception("Error on Decode Token")
+    return user_id
+
