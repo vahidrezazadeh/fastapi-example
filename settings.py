@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+import os
 
 class Settings(BaseSettings):
     app_name: str = "Fast Api Project Name"
@@ -13,6 +14,10 @@ class Settings(BaseSettings):
 
     LOG_STDOUT_FILENAME: str = 'fapi_log_access.log'
     LOG_STDERR_FILENAME: str = 'fapi_log_error.log'
+
+    TOKEN_EXPIRE_SECONDS : int = 86400 # Expiration time, unit: seconds ( 86400 = 1 * 24 * 60 * 60)
+    TOKEN_SECRET_KEY : str = 'jwt_secret_key'
+    TOKEN_ALGORITHM : str = 'HS256'
 
     class Config:
         env_file = ".env"
